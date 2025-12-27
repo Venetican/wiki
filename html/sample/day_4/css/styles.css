@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    text-align: center;
+    font-family: Poppins, sans-serif;
+}
+nav {
+    position: fixed;
+    top:0;
+    width: 100%;
+    padding: 25px;
+    border-bottom: 2px solid #e3e3e3;
+}
+nav a {
+    text-decoration: none;
+    color: #929292;
+    margin: 0 20px;
+}
+nav a:hover {
+    color: black;
+}
+nav a.active {
+    color: black;
+}
+header {
+    padding-top: calc(50px + 1rem + 2px)
+}
+h1 {
+    margin-top: 100px;
+    font-size: 3.75rem;
+    font-weight: bold;
+    line-height: 1.2em;
+}
+h1 + p {
+    width: 800px;
+    margin: 35px auto;
+}
+#cta-button {
+    text-decoration: none;
+    text-transform: uppercase;
+    background: linear-gradient(#D786FF, #722cff);
+    display: inline-block;
+    padding: 1em 3em;
+    font-weight: 600;
+    border-radius: 1000px;
+    transition: 150ms ease;
+}
+#cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.video {
+    margin-top: 30px;
+    width: min(1100px, 90%);
+    border: none;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+}
+
+.products-container {
+    margin-top: 30px;
+}
+.product-card {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    margin: 0 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    align-content: center;
+    padding: 20px;
+    border-radius: 30px;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.product-card > h2 {
+    margin-bottom: 10px;
+}
+.product-card:first-child {
+    border: 1px solid black;
+}
+.product-card:nth-child(2) {
+    background-color: #722cff;
+    color: white;
+}
+.product-card:last-child {
+    background-color: black;
+    color: white;
+}
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+form {
+    margin-top: 20px;
+}
+input {
+    margin: 0 auto;
+    display: block;
+    text-align: left;
+    margin-bottom: 15px;
+    font: inherit;
+    border-radius: 30px;
+    
+}
+input[type="text"], input[type="password"] {
+    padding: 5px 20px;
+    width: 400px;
+    border: none;
+    background-color: #e3e3e3;
+    border-radius: 100px;
+    outline: none;
+}
+button[type="submit"] {
+    width: 200px;
+    padding: 10px;
+    background-color: #722cff;
+    color: white;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 150ms ease;
+}

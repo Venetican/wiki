@@ -1,0 +1,315 @@
+/* Contact section */
+.contact-content {
+  margin-top: 3rem;
+}
+
+.contact__subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: #c7d2fe;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 300;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease 0.4s forwards;
+}
+
+.contact__subtitle-text {
+  color: #c7d2fe;
+}
+
+.contact__subtitle-highlight {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contact-item:hover::before {
+  opacity: 1;
+}
+
+.contact-item__icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.contact-item__content {
+  flex: 1;
+}
+
+.contact-item__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item__text {
+  font-size: 1.25rem;
+  color: #c7d2fe;
+  margin: 0;
+}
+
+.contact-item__link {
+  font-size: 1.25rem;
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contact-item__link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.contact-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  color: #ffffff;
+  padding: 1.5rem 3rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.contact-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-button__icon {
+  font-size: 1.5rem;
+}
+
+.contact-button__text {
+  font-weight: 600;
+}
+
+/* Calendly popup styling */
+.calendly-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendly-popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.calendly-popup-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  height: 80%;
+  max-height: 600px;
+  background: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: popupSlideIn 0.3s ease-out;
+}
+
+.calendly-popup-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.calendly-popup-close:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+}
+
+.close-icon {
+  line-height: 1;
+  font-weight: bold;
+}
+
+.calendly-popup-content iframe {
+  border-radius: 1rem;
+}
+
+@keyframes popupSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .contact-item {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .contact-item__icon {
+    font-size: 2rem;
+  }
+  
+  .contact-item__title {
+    font-size: 1.25rem;
+  }
+  
+  .contact-item__text,
+  .contact-item__link {
+    font-size: 1.1rem;
+  }
+  
+  .contact-button {
+    padding: 1.25rem 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .contact-button__icon {
+    font-size: 1.25rem;
+  }
+  
+  .calendly-popup-content {
+    width: 95%;
+    height: 85%;
+    max-height: 500px;
+  }
+  
+  .calendly-popup-close {
+    width: 35px;
+    height: 35px;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-item {
+    padding: 1.25rem;
+    gap: 0.75rem;
+  }
+  
+  .contact-item__icon {
+    font-size: 1.75rem;
+  }
+  
+  .contact-item__title {
+    font-size: 1.1rem;
+  }
+  
+  .contact-item__text,
+  .contact-item__link {
+    font-size: 1rem;
+  }
+  
+  .contact-button {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    gap: 0.75rem;
+  }
+  
+  .contact-button__icon {
+    font-size: 1.1rem;
+  }
+  
+  .calendly-popup-content {
+    width: 98%;
+    height: 90%;
+    max-height: 450px;
+  }
+  
+  .calendly-popup-close {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}

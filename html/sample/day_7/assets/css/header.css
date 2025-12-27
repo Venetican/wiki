@@ -1,0 +1,177 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  gap: 1rem; /* kontrolovaná mezera mezi fotkou a textem */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 4rem) clamp(1rem, 4vw, 3rem);
+  min-height: 50vh;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-top: 80px; /* prostor pro navigaci */
+}
+
+.header__content { 
+  max-width: 640px; 
+}
+
+.header__content h1 {
+  font-size: clamp(2.5rem, 7vw, 4rem); /* ještě větší fluidní velikost */
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.02em;
+}
+
+.header__content h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem); /* větší responzivní velikost */
+  font-weight: 300;
+  color: #c7d2fe;  /* světlejší fialová */
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+}
+
+.animated-text {
+  background: linear-gradient(135deg, #a5b4fc 0%, #c7d2fe 100%) !important; /* konstantní světle fialový gradient */
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-weight: 600; /* tučnější pro lepší viditelnost */
+  animation: none !important; /* odstraní všechny animace */
+}
+
+.header__content h3 {
+  font-size: clamp(1.2rem, 3.5vw, 1.5rem); /* větší font */
+  color: #e2e8f0; /* světlejší barva pro lepší čitelnost */
+  line-height: 1.8; /* větší řádkování pro lepší čitelnost */
+  margin-bottom: 2.5rem;
+  max-width: 100%;
+  text-align: center; /* centrování místo justify */
+  font-weight: 300; /* lehčí váha */
+  letter-spacing: 0.02em;
+  opacity: 0.9;
+}
+
+.highlight-text {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #1d4ed8 100%); /* výraznější modrý gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600; /* tučnější pro lepší viditelnost */
+}
+
+.header__content a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);  /* krásný gradient */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3rem;
+  font-weight: 600;
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.header__content a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.header__content a:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.6);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.header__content a:hover::before {
+  left: 100%;
+}
+
+.header__image {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0; /* odstraněno */
+}
+
+.header__image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 200px; /* menší kruhová fotka */
+  height: 200px;
+  text-align: center; /* centruje fotku v wrapperu */
+}
+
+.header__image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%); /* konstantní gradient */
+  border-radius: 50%; /* kruhové ohraničení */
+  z-index: -1;
+  opacity: 0.9;
+}
+
+.header__image-wrapper::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%); /* tmavší gradient */
+  border-radius: 50%; /* kruhové ohraničení */
+  z-index: -1;
+}
+
+.header__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* zachová proporce a vyplní kruh */
+  border-radius: 50%; /* kruhový tvar */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  display: block; /* odstraní inline spacing */
+  margin: 0 auto; /* centruje fotku */
+}
+
+.header__image:hover .header__image-wrapper img {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.header__image:hover .header__image-wrapper::before {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .header__image {
+    margin-bottom: 0.25rem; /* menší margin na mobilu */
+  }
+
+  .header__image-wrapper {
+    width: 150px; /* menší kruh na mobilu */
+    height: 150px;
+  }
+}

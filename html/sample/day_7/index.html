@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Srp</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="assets/img/site.webmanifest">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/sections.css">
+    <link rel="stylesheet" href="assets/css/services.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+    <link rel="stylesheet" href="assets/css/tech-stack.css">
+    <link rel="stylesheet" href="assets/css/certifications.css">
+    <link rel="stylesheet" href="assets/css/education.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/background-effects.css">
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/calendly.js"></script>
+</head>
+<body>
+    <nav class="nav">
+        <a href="#" class="nav__brand" onclick="scrollToTop();return false;">
+            <div class="nav__brand-initials">
+                <div class="nav__brand-initials-wrapper">
+                    <span class="nav__brand-initials-text">DS</span>
+                </div>
+            </div>
+            <span class="nav__brand-text">Daniel Srp</span>
+        </a>
+        
+        <div class="nav__links">
+            <a href="#services" class="nav__link">Services</a>
+            <a href="#tech-stack" class="nav__link">Tech Stack</a>
+            <a href="#projects" class="nav__link">Projects</a>
+            <a href="#certifications" class="nav__link">Certifications</a>
+            <a href="#education" class="nav__link">Education</a>
+            <a href="#" class="nav__link nav__link--cta" onclick="openCalendlyPopup();return false;">Let's Talk</a>
+        </div>
+
+        <button class="nav__hamburger" onclick="toggleMobileMenu();">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </nav>
+
+    <header class="header">
+        <div class="header__image">
+            <div class="header__image-wrapper">
+                <img src="assets/img/my_photo.png" alt="Daniel Srp">
+            </div>
+        </div>
+        <div class="header__content">
+            <h1>Daniel Srp</h1>
+            <h2><span class="animated-text">DATA</span> ENGINEER / <span class="animated-text">CLOUD</span> ENGINEER</h2>
+            <h3>Turning <span class="highlight-text">data</span> into value across <span class="highlight-text">Big Data</span> and <span class="highlight-text">Cloud</span> ecosystems.</h3>
+            <a href="#" onclick="openCalendlyPopup();return false;">Let's Talk</a>
+        </div>
+    </header>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="services__title">
+                <span class="services__title-main">This is How I Can</span>
+                <span class="services__title-highlight">Help You Grow</span>
+            </h2>
+            <p class="services__subtitle">
+                <span class="services__subtitle-text">On-prem</span>
+                <span class="services__subtitle-highlight">Big Data</span>
+                <span class="services__subtitle-text">and</span>
+                <span class="services__subtitle-highlight">Cloud</span>
+                <span class="services__subtitle-text">expertise—focused on reliability, speed, and value.</span>
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <span class="service-icon">🏗️</span>
+                    </div>
+                    <h3 class="service-card__title">Data Platform Architecture</h3>
+                    <p class="service-card__description">Design and implement scalable, secure data platforms on cloud or on-prem with clean layers and future-proof foundations.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <span class="service-icon">⚡</span>
+                    </div>
+                    <h3 class="service-card__title">ETL/ELT Pipelines</h3>
+                    <p class="service-card__description">Build reliable, testable pipelines with modern tooling (Spark, SQL, Airflow) for faster loads and fewer failures.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <span class="service-icon">☁️</span>
+                    </div>
+                    <h3 class="service-card__title">Cloud Migration</h3>
+                    <p class="service-card__description">Move workloads to Azure cleanly, right-size compute and storage, cut waste without hurting performance.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <span class="service-icon">📊</span>
+                    </div>
+                    <h3 class="service-card__title">Real-time Data</h3>
+                    <p class="service-card__description">Deliver low-latency insights with Kafka/Spark Streaming from event ingestion to near-real-time dashboards.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <span class="service-icon">🔍</span>
+                    </div>
+                    <h3 class="service-card__title">Data Quality</h3>
+                    <p class="service-card__description">Automated checks, SLAs and alerts. Know when data breaks and how to fix it before users notice.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <span class="service-icon">🔧</span>
+                    </div>
+                    <h3 class="service-card__title">DevOps & IaC</h3>
+                    <p class="service-card__description">Infrastructure automation, CI/CD pipelines, and monitoring. Deploy faster, fail less, recover quicker.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="tech-stack" class="section">
+        <div class="container">
+            <h2 class="tech-stack__title">
+                <span class="tech-stack__title-main">Technologies I</span>
+                <span class="tech-stack__title-highlight">Work With</span>
+            </h2>
+            <p class="tech-stack__subtitle">
+                <span class="tech-stack__subtitle-text">Modern</span>
+                <span class="tech-stack__subtitle-highlight">tools</span>
+                <span class="tech-stack__subtitle-text">and</span>
+                <span class="tech-stack__subtitle-highlight">technologies</span>
+                <span class="tech-stack__subtitle-text">for data engineering and cloud solutions.</span>
+            </p>
+            
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3 class="tech-category__title">Cloud Platforms</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <img src="assets/img/stack/azure.png" alt="Azure" class="tech-item__icon">
+                            <span class="tech-item__name">Azure</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="assets/img/stack/aws.png" alt="AWS" class="tech-item__icon">
+                            <span class="tech-item__name">AWS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="tech-category__title">Data Processing</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <img src="assets/img/stack/spark.png" alt="Apache Spark" class="tech-item__icon">
+                            <span class="tech-item__name">Apache Spark</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="assets/img/stack/python.png" alt="Python" class="tech-item__icon">
+                            <span class="tech-item__name">Python</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="assets/img/stack/Sql_data_base_with_logo.png" alt="SQL" class="tech-item__icon">
+                            <span class="tech-item__name">SQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="assets/img/stack/kafka.png" alt="Kafka" class="tech-item__icon">
+                            <span class="tech-item__name">Kafka</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="tech-category__title">Orchestration</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <img src="assets/img/stack/airflow.png" alt="Airflow" class="tech-item__icon">
+                            <span class="tech-item__name">Airflow</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="assets/img/stack/azure_data_factory.png" alt="Azure Data Factory" class="tech-item__icon">
+                            <span class="tech-item__name">Azure Data Factory</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="assets/img/stack/docker.png" alt="Docker" class="tech-item__icon">
+                            <span class="tech-item__name">Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="assets/img/stack/informatica.png" alt="Informatica" class="tech-item__icon">
+                            <span class="tech-item__name">Informatica</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="tech-category__title">Data Storage</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <img src="assets/img/stack/databricks.png" alt="Databricks" class="tech-item__icon">
+                            <span class="tech-item__name">Databricks</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="assets/img/stack/azure_storage.png" alt="Azure Storage" class="tech-item__icon">
+                            <span class="tech-item__name">Azure Storage</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="assets/img/stack/hadoop.png" alt="Hadoop" class="tech-item__icon">
+                            <span class="tech-item__name">Hadoop</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="assets/img/stack/cosmos_db.png" alt="Cosmos DB" class="tech-item__icon">
+                            <span class="tech-item__name">Cosmos DB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3 class="tech-category__title">Tools</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <img src="assets/img/stack/git.png" alt="Git" class="tech-item__icon">
+                            <span class="tech-item__name">Git</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="assets/img/stack/grafana.png" alt="Grafana" class="tech-item__icon">
+                            <span class="tech-item__name">Grafana</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="assets/img/stack/sonarqube.png" alt="SonarQube" class="tech-item__icon">
+                            <span class="tech-item__name">SonarQube</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="assets/img/stack/jenkins.png" alt="Jenkins" class="tech-item__icon">
+                            <span class="tech-item__name">Jenkins</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="projects__title">
+                <span class="projects__title-main">Professional</span>
+                <span class="projects__title-highlight">Experience</span>
+            </h2>
+            <p class="projects__subtitle">
+                <span class="projects__subtitle-text">Building</span>
+                <span class="projects__subtitle-highlight">data solutions</span>
+                <span class="projects__subtitle-text">across diverse industries and technologies.</span>
+            </p>
+            
+            <div class="projects-timeline">
+                <div class="project-item">
+                    <div class="project-item__content">
+                        <div class="project-item__logo">
+                            <img src="assets/img/logo/pwc.png" alt="PwC" class="project-logo">
+                        </div>
+                        <div class="project-item__header">
+                            <h3 class="project-item__title">Cloud Data Engineer</h3>
+                            <p class="project-item__company">PwC</p>
+                            <p class="project-item__period">January 2025 – Present</p>
+                        </div>
+                        <div class="project-item__description">
+                            <ul>
+                                <li>Lead migration of on-premise data systems to Azure Databricks platform for CEZ Prodej, a. s.</li>
+                                <li>Design and optimize scalable Python/SQL data pipelines for enterprise-level data processing</li>
+                                <li>Implement cloud-based data transformations ensuring seamless integration with downstream analytics</li>
+                                <li>Develop comprehensive reporting solutions and maintain data quality standards</li>
+                            </ul>
+                        </div>
+                        <div class="project-item__tags">
+                            <span class="project-tag">Databricks</span>
+                            <span class="project-tag">Azure</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-item__content">
+                        <div class="project-item__logo">
+                            <img src="assets/img/logo/kb.png" alt="Komerční banka" class="project-logo">
+                        </div>
+                        <div class="project-item__header">
+                            <h3 class="project-item__title">Big Data Engineer</h3>
+                            <p class="project-item__company">Komerční banka</p>
+                            <p class="project-item__period">October 2021 – Present</p>
+                        </div>
+                        <div class="project-item__description">
+                            <ul>
+                                <li>Engineer and maintain enterprise-scale big data pipelines on BDP platform using Apache Spark, Kafka, and Hadoop</li>
+                                <li>Automate complex workflows with Python and Bash scripting, significantly reducing development time</li>
+                                <li>Lead comprehensive application monitoring and performance optimization across BDP environment</li>
+                                <li>Deliver technical training and best-practice guidance to development teams</li>
+                            </ul>
+                        </div>
+                        <div class="project-item__tags">
+                            <span class="project-tag">Hadoop (HDFS, Hive, Impala)</span>
+                            <span class="project-tag">Apache Spark</span>
+                            <span class="project-tag">Kafka</span>
+                            <span class="project-tag">Airflow</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Bash</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-item__content">
+                        <div class="project-item__logo">
+                            <img src="assets/img/logo/dodo.png" alt="DODO" class="project-logo">
+                        </div>
+                        <div class="project-item__header">
+                            <h3 class="project-item__title">Data Engineer</h3>
+                            <p class="project-item__company">DODO</p>
+                            <p class="project-item__period">July 2022 – December 2023</p>
+                        </div>
+                        <div class="project-item__description">
+                            <ul>
+                                <li>Designed and maintained robust ETL pipelines in Microsoft Azure using Cosmos DB and Data Lake</li>
+                                <li>Built scalable Python/SQL workflows orchestrated with Apache Airflow for automated data processing</li>
+                                <li>Developed innovative Jira-based extraction tool to automate client billing processes</li>
+                                <li>Ensured data integrity and performance optimization across all data engineering solutions</li>
+                            </ul>
+                        </div>
+                        <div class="project-item__tags">
+                            <span class="project-tag">Azure</span>
+                            <span class="project-tag">Cosmos DB</span>
+                            <span class="project-tag">Airflow</span>
+                            <span class="project-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-item__content">
+                        <div class="project-item__logo">
+                            <img src="assets/img/logo/amrest.png" alt="Amrest" class="project-logo">
+                        </div>
+                        <div class="project-item__header">
+                            <h3 class="project-item__title">Data Analyst</h3>
+                            <p class="project-item__company">Amrest</p>
+                            <p class="project-item__period">March 2021 – October 2021</p>
+                        </div>
+                        <div class="project-item__description">
+                            <ul>
+                                <li>Developed centralized reporting platform for KFC department using Power BI, VBA, and Excel</li>
+                                <li>Consolidated fragmented reports across multiple departments into unified dashboard solutions</li>
+                                <li>Streamlined data workflows and significantly improved organizational data transparency</li>
+                                <li>Provided data analysis and insights to support strategic business decision-making</li>
+                            </ul>
+                        </div>
+                        <div class="project-item__tags">
+                            <span class="project-tag">Power BI</span>
+                            <span class="project-tag">VBA</span>
+                            <span class="project-tag">Excel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section">
+        <div class="container">
+            <h1 class="certifications__title">
+                <span class="certifications__title-main">Professional</span>
+                <span class="certifications__title-highlight">Certifications</span>
+            </h1>
+            <p class="certifications__subtitle">
+                <span class="certifications__subtitle-text">Validated expertise in</span>
+                <span class="certifications__subtitle-highlight">cloud technologies</span>
+                <span class="certifications__subtitle-text">and data engineering solutions.</span>
+            </p>
+            
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-card__image">
+                        <img src="assets/img/certifications/dp_203.png" alt="Azure Data Engineer Associate">
+                    </div>
+                    <h3 class="certification-card__title">Azure Data Engineer Associate</h3>
+                    <p class="certification-card__issuer">Microsoft</p>
+                    <p class="certification-card__description">
+                        Demonstrates expertise in designing and implementing data solutions using Azure data services, 
+                        including Azure Data Factory, Azure Databricks, and Azure Synapse Analytics.
+                    </p>
+                    <p class="certification-card__date">Validated Expertise</p>
+                    <span class="certification-card__badge">DP-203</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="container">
+            <h1 class="education__title">
+                <span class="education__title-main">Academic</span>
+                <span class="education__title-highlight">Background</span>
+            </h1>
+            <p class="education__subtitle">
+                <span class="education__subtitle-text">Dual master's degrees combining</span>
+                <span class="education__subtitle-highlight">data analytics</span>
+                <span class="education__subtitle-text">and</span>
+                <span class="education__subtitle-highlight">economics</span>
+                <span class="education__subtitle-text">for comprehensive business understanding.</span>
+            </p>
+            
+            <div class="education-grid">
+                <div class="education-item">
+                    <div class="education-item__logo">
+                        <img src="assets/img/education/fis.png" alt="Faculty of Informatics and Statistics" class="education-logo">
+                    </div>
+                    <div class="education-item__content">
+                        <div class="education-item__header">
+                            <h3 class="education-item__title">Master's degree (Ing.), Faculty of Informatics and Statistics</h3>
+                            <p class="education-item__university">Prague University of Economics and Business</p>
+                            <p class="education-item__period">Sep 2021 - Jan 2024</p>
+                        </div>
+                        <div class="education-item__description">
+                            <ul>
+                                <li><strong>Focus:</strong> Data Analytics, Data Warehousing, Programming, Data Engineering, ML</li>
+                                <li><strong>Finalist:</strong> Data Project Competition (NFT project)</li>
+                                <li><strong>Master thesis:</strong> Near real-time Big Data application in a data lake (design, development, monitoring, documentation)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-item__logo">
+                        <img src="assets/img/education/nf_logo_png.png" alt="Faculty of Economics" class="education-logo">
+                    </div>
+                    <div class="education-item__content">
+                        <div class="education-item__header">
+                            <h3 class="education-item__title">Master's degree (Ing.), Faculty of Economics</h3>
+                            <p class="education-item__university">Prague University of Economics and Business</p>
+                            <p class="education-item__period">Sep 2020 - Jun 2024</p>
+                        </div>
+                        <div class="education-item__description">
+                            <ul>
+                                <li><strong>Focus:</strong> Microeconomics, Macroeconomics, National Economy</li>
+                                <li><strong>Master thesis:</strong> ASEAN and prospects of a monetary union (OCA indicators, correlation & cluster analysis)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section__title">Let's Talk</h2>
+            <p class="contact__subtitle">
+                <span class="contact__subtitle-text">Schedule a meeting to discuss your</span>
+                <span class="contact__subtitle-highlight">data engineering</span>
+                <span class="contact__subtitle-text">needs</span>
+            </p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-item__icon">📞</div>
+                        <div class="contact-item__content">
+                            <h3 class="contact-item__title">Phone</h3>
+                            <p class="contact-item__text">+420 724 581 008</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item__icon">📧</div>
+                        <div class="contact-item__content">
+                            <h3 class="contact-item__title">Email</h3>
+                            <a href="mailto:daniel.srp@email.com" class="contact-item__link">daniel.srp@email.cz</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item__icon">💼</div>
+                        <div class="contact-item__content">
+                            <h3 class="contact-item__title">LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/daniel-srp/" target="_blank" class="contact-item__link">linkedin.com/in/daniel-srp</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-action">
+                    <a href="#" class="contact-button" onclick="openCalendlyPopup();return false;">
+                        <span class="contact-button__icon">📅</span>
+                        <span class="contact-button__text">Book a Meeting</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Menu Popup -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-overlay" onclick="closeMobileMenu();"></div>
+        <div class="mobile-menu-content">
+            <button class="mobile-menu-close" onclick="closeMobileMenu();">
+                <span class="close-icon">×</span>
+            </button>
+            <nav class="mobile-nav">
+                <a href="#services" class="mobile-nav__link" onclick="closeMobileMenu();">Services</a>
+                <a href="#tech-stack" class="mobile-nav__link" onclick="closeMobileMenu();">Tech Stack</a>
+                <a href="#projects" class="mobile-nav__link" onclick="closeMobileMenu();">Projects</a>
+                <a href="#certifications" class="mobile-nav__link" onclick="closeMobileMenu();">Certifications</a>
+                <a href="#education" class="mobile-nav__link" onclick="closeMobileMenu();">Education</a>
+                <a href="#contact" class="mobile-nav__link" onclick="closeMobileMenu();">Contact</a>
+                <a href="#" class="mobile-nav__link mobile-nav__link--cta" onclick="openCalendlyPopup();closeMobileMenu();return false;">Let's Talk</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Calendly Popup -->
+    <div id="calendly-popup" class="calendly-popup">
+        <div class="calendly-popup-overlay" onclick="closeCalendlyPopup();"></div>
+        <div class="calendly-popup-content">
+            <button class="calendly-popup-close" onclick="closeCalendlyPopup();">
+                <span class="close-icon">×</span>
+            </button>
+            <iframe 
+                src="https://calendly.com/daniel-srp/30min?embed_domain=localhost&embed_type=Inline"
+                width="100%" 
+                height="100%" 
+                frameborder="0">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Background Data Effects -->
+    <div class="data-particles" id="data-particles"></div>
+    <div class="binary-stream" id="binary-stream"></div>
+    <div class="data-nodes" id="data-nodes"></div>
+    <div class="data-connections" id="data-connections"></div>
+
+    <script src="assets/js/background-effects.js"></script>
+</body>
+</html>

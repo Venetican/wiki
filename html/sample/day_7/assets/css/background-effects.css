@@ -1,0 +1,228 @@
+/* Background data effects */
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  z-index: -2;
+  animation: backgroundShift 20s ease-in-out infinite;
+}
+
+/* Floating data particles */
+.data-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.data-particle {
+  position: absolute;
+  color: rgba(99, 102, 241, 0.3);
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  font-weight: bold;
+  animation: floatParticle 15s linear infinite;
+  opacity: 0;
+}
+
+.data-particle:nth-child(odd) {
+  color: rgba(139, 92, 246, 0.3);
+  animation-duration: 18s;
+}
+
+.data-particle:nth-child(3n) {
+  color: rgba(236, 72, 153, 0.3);
+  animation-duration: 22s;
+}
+
+.data-particle:nth-child(4n) {
+  color: rgba(96, 165, 250, 0.3);
+  animation-duration: 16s;
+}
+
+.data-particle:nth-child(5n) {
+  color: rgba(59, 130, 246, 0.3);
+  animation-duration: 20s;
+}
+
+/* Binary code streams */
+.binary-stream {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.binary-line {
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(to bottom, 
+    rgba(99, 102, 241, 0.8) 0%, 
+    rgba(99, 102, 241, 0.4) 50%, 
+    transparent 100%);
+  animation: binaryFlow 12s linear infinite;
+}
+
+.binary-line:nth-child(odd) {
+  background: linear-gradient(to bottom, 
+    rgba(139, 92, 246, 0.8) 0%, 
+    rgba(139, 92, 246, 0.4) 50%, 
+    transparent 100%);
+  animation-duration: 15s;
+}
+
+.binary-line:nth-child(3n) {
+  background: linear-gradient(to bottom, 
+    rgba(236, 72, 153, 0.8) 0%, 
+    rgba(236, 72, 153, 0.4) 50%, 
+    transparent 100%);
+  animation-duration: 18s;
+}
+
+/* Data nodes */
+.data-node {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background: rgba(99, 102, 241, 0.6);
+  border-radius: 50%;
+  z-index: -1;
+  animation: nodePulse 8s ease-in-out infinite;
+}
+
+.data-node:nth-child(odd) {
+  background: rgba(139, 92, 246, 0.6);
+  animation-duration: 10s;
+}
+
+.data-node:nth-child(3n) {
+  background: rgba(236, 72, 153, 0.6);
+  animation-duration: 12s;
+}
+
+/* Connection lines */
+.data-connection {
+  position: fixed;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    rgba(99, 102, 241, 0.3) 0%, 
+    rgba(99, 102, 241, 0.1) 50%, 
+    rgba(99, 102, 241, 0.3) 100%);
+  z-index: -1;
+  animation: connectionFlow 25s linear infinite;
+}
+
+/* Animations */
+@keyframes backgroundShift {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(-20px) translateY(-10px);
+  }
+  50% {
+    transform: translateX(10px) translateY(-20px);
+  }
+  75% {
+    transform: translateX(-10px) translateY(10px);
+  }
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(100vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) translateX(50px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes binaryFlow {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes nodePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+@keyframes connectionFlow {
+  0% {
+    transform: translateX(-100%) scaleX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw) scaleX(1);
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .data-particle {
+    font-size: 0.6rem;
+  }
+  
+  .binary-line {
+    width: 1px;
+    height: 60px;
+  }
+  
+  .data-node {
+    width: 3px;
+    height: 3px;
+  }
+}

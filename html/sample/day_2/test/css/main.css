@@ -1,0 +1,22 @@
+#outer-box {
+  width: 50%;
+  height: 200px;
+  background-color: red;
+}
+#inner-box {
+  width: 200px;
+  height: 50%;
+  background-color: blue;
+}
+#another-test {
+  width: 50%;
+  height: 200px;
+  background-color: green;
+  border-color: black;
+  border-width: 10px;
+  border-left-style: dashed;
+  border-right-style: solid;
+  border-right-color: blue;
+  border-top-style: dotted;
+  border-bottom-style: double;
+}
