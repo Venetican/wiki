@@ -24,7 +24,7 @@ By the end of this section, you will:
 
 ## React Core Concept: Components
 
-![Components - the core building blocks](./03_react_essentials/essentials-02-its-all-about-components.jpg)
+![Components - the core building blocks](./assets/03_react_essentials/essentials-02-its-all-about-components.jpg)
 
 If you had to identify **one single core concept** that every React application relies on, it would be **Components**.
 
@@ -229,7 +229,7 @@ This can feel confusing at first, but it’s one of the core ideas behind React.
 
 ## JSX – JavaScript Syntax Extension
 
-![JSX and React Components](./03_react_essentials/essentials-04-jsx-and-react-cmp.jpg)
+![JSX and React Components](./assets/03_react_essentials/essentials-04-jsx-and-react-cmp.jpg)
 
 The `.jsx` extension indicates that the file uses **JSX**.
 
@@ -306,7 +306,7 @@ We’re ready to **create our first custom React component** and start building 
 
 ## Creating and Using Your First Custom React Component
 
-![Creating and Using Custom Components](./03_react_essentials/essentials-05-creating-and-using-a-first-custom-cmp.jpg)
+![Creating and Using Custom Components](./assets/03_react_essentials/essentials-05-creating-and-using-a-first-custom-cmp.jpg)
 
 When building React applications, you are **not limited to a single component** like `App`.
 
@@ -644,7 +644,7 @@ This is the foundation of how **all React applications work**.
 
 ## Outputting Dynamic Content in React Components
 
-![Dynamic Values in JSX](./03_react_essentials/essentials-07-dynamic-values.jpg)
+![Dynamic Values in JSX](./assets/03_react_essentials/essentials-07-dynamic-values.jpg)
 
 Now that we have built our **first custom React component**, the next crucial step is learning **how to output dynamic content** instead of static text.
 
@@ -789,7 +789,7 @@ This dynamic rendering mechanism is one of the **most important features in Reac
 
 ## Loading Images Correctly in React with Dynamic Values
 
-![Dynamic Attributes and Image Loading](./03_react_essentials/essentials-08-dynamic-attributes-and-better-image-asset-loading.jpg)
+![Dynamic Attributes and Image Loading](./assets/03_react_essentials/essentials-08-dynamic-attributes-and-better-image-asset-loading.jpg)
 
 Now that we understand how to **output dynamic values using curly braces in JSX**, we can apply the same mechanism to **load images in a better and safer way**.
 
@@ -914,7 +914,7 @@ This approach ensures your React application is **robust, optimized, and deploym
 
 # Reusable Components & Props in React
 
-![Component Reusability and Props](./03_react_essentials/essentials-09-cmp-reusability-props.jpg)
+![Component Reusability and Props](./assets/03_react_essentials/essentials-09-cmp-reusability-props.jpg)
 
 ## Why Component Reusability Matters
 
@@ -1659,7 +1659,7 @@ This code shows how React components receive input via props, allowing a single 
 
 # Restructuring React Components into Separate Files
 
-![Best Practice: Components in Separate Files](./03_react_essentials/essentials-11-best-practice-project-structure-cmp-in-separate-files.jpg)
+![Best Practice: Components in Separate Files](./assets/03_react_essentials/essentials-11-best-practice-project-structure-cmp-in-separate-files.jpg)
 
 ## Why Component Separation Matters
 
@@ -2018,7 +2018,7 @@ Splitting CSS into component-specific files improves structure and maintainabili
 
 # Tab Buttons, `children` Prop, and Component Composition in React
 
-![The children Prop](./03_react_essentials/essentials-13-children-prop.jpg)
+![The children Prop](./assets/03_react_essentials/essentials-13-children-prop.jpg)
 
 ## Goal of This Step
 
@@ -2461,7 +2461,7 @@ Or functionally:
 
 # Handling Click Events in React (TabButton Example)
 
-![Reacting to Events](./03_react_essentials/essentials-14-reacting-to-events.jpg)
+![Reacting to Events](./assets/03_react_essentials/essentials-14-reacting-to-events.jpg)
 
 ## Goal of This Step
 
@@ -2642,7 +2642,7 @@ Next logical steps:
 
 # Passing Event Handlers from Parent to Child (TabButton → App)
 
-![Passing Functions as Values to Custom Components](./03_react_essentials/essentials-15-passing-functions-as-values-to-custom-components.jpg)
+![Passing Functions as Values to Custom Components](./assets/03_react_essentials/essentials-15-passing-functions-as-values-to-custom-components.jpg)
 
 ## Goal of This Step
 
@@ -2850,7 +2850,7 @@ Next step:
 
 ## Passing Arguments to Event Handlers in React (Tabs Example)
 
-![Adding Custom Parameters to Functions](./03_react_essentials/essentials-16-adding-custom-parameters-to-functions.jpg)
+![Adding Custom Parameters to Functions](./assets/03_react_essentials/essentials-16-adding-custom-parameters-to-functions.jpg)
 
 ### Goal of This Step
 
@@ -3235,7 +3235,7 @@ This is the **most important concept in React**.
 
 # React State with useState – Making the UI Truly Dynamic
 
-![Managing State and Using Hooks](./03_react_essentials/essentials-18-managing-state-and-using-hooks.jpg)
+![Managing State and Using Hooks](./assets/03_react_essentials/essentials-18-managing-state-and-using-hooks.jpg)
 
 ## Why We Need State
 
@@ -3443,7 +3443,7 @@ This is the turning point where React becomes powerful.
 
 # Using State to Render Dynamic Tab Content
 
-![Deriving and Outputting Data Based on State](./03_react_essentials/essentials-19-deriving-and-outputting-data-based-on-state.jpg)
+![Deriving and Outputting Data Based on State](./assets/03_react_essentials/essentials-19-deriving-and-outputting-data-based-on-state.jpg)
 
 ## Goal of This Step
 
@@ -3645,7 +3645,7 @@ But functionally, this is already a **complete dynamic tab system**.
 
 # Conditional Rendering in React
 
-![Rendering Content Conditionally](./03_react_essentials/essentials-20-rendering-content-conditionally.jpg)
+![Rendering Content Conditionally](./assets/03_react_essentials/essentials-20-rendering-content-conditionally.jpg)
 
 ## Why Conditional Rendering Is Needed
 
@@ -4225,7 +4225,7 @@ Once this pattern clicks, **most React UI problems become trivial**.
 
 ## Dynamic Styling in React: Highlighting the Selected Tab
 
-![CSS Styling and Dynamic Styling](./03_react_essentials/essentials-21-css-styling-and-dynamic-styling.jpg)
+![CSS Styling and Dynamic Styling](./assets/03_react_essentials/essentials-21-css-styling-and-dynamic-styling.jpg)
 
 Now that we know how to **render content conditionally**, the next important step is **styling**, and especially **dynamic styling**.
 
@@ -4416,7 +4416,7 @@ This pattern is fundamental and appears everywhere in real-world React applicati
 
 ## Rendering Lists Dynamically in React (Using `map()`)
 
-![Outputting Lists Dynamically](./03_react_essentials/essentials-22-outputting-lists-dynamically.jpg)
+![Outputting Lists Dynamically](./assets/03_react_essentials/essentials-22-outputting-lists-dynamically.jpg)
 
 At this point, the demo application is functionally complete, but there is **one important improvement** we should make in the codebase.
 
