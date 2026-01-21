@@ -1,3 +1,76 @@
+# 📚 Table of Contents
+
+## Browser Basics & Script Loading
+- [JavaScript Core Concepts – Browser Basics for React Developers](#javascript-core-concepts--browser-basics-for-react-developers)
+- [How JavaScript Is Added to a Website](#how-javascript-is-added-to-a-website)
+- [The `defer` Attribute](#the-defer-attribute)
+- [Modern JavaScript: Modules](#modern-javascript-modules)
+
+## Import & Export (Modules)
+- [JavaScript Modules – Import & Export Refresher](#javascript-modules--import--export-refresher)
+- [Named Exports](#named-exports)
+- [Default Exports](#default-exports)
+- [Importing Multiple Named Exports](#importing-multiple-named-exports)
+- [Aliases with `as`](#aliases-with-as)
+
+## Variables & Values
+- [JavaScript Fundamentals – Variables, Values, and Operators](#javascript-fundamentals--variables-values-and-operators)
+- [let vs const (Modern JavaScript)](#let-vs-const-modern-javascript)
+- [Scope in JavaScript vs Python](#scope-in-javascript-vs-python--precise-structured-mental-model)
+
+## Operators
+- [JavaScript Fundamentals – Operators and Values](#javascript-fundamentals--operators-and-values)
+- [Arithmetic Operators](#1-arithmetic-operators)
+- [Comparison Operators](#3-comparison-operators)
+
+## Functions
+- [JavaScript Fundamentals – Functions](#javascript-fundamentals--functions)
+- [Function Parameters (Inputs)](#4-function-parameters-inputs)
+- [Returning Values from Functions](#6-returning-values-from-functions)
+- [JavaScript Fundamentals – Arrow Functions](#javascript-fundamentals--arrow-functions)
+- [Arrow Functions – Syntax Shortcuts and Edge Cases](#arrow-functions--syntax-shortcuts-and-edge-cases)
+
+## Objects & Classes
+- [JavaScript Fundamentals – Objects and Classes](#javascript-fundamentals--objects-and-classes)
+- [Object Properties (Key–Value Pairs)](#2-object-properties-keyvalue-pairs)
+- [The `this` Keyword](#5-the-this-keyword)
+- [Creating Objects with Classes (Blueprints)](#6-creating-objects-with-classes-blueprints)
+
+## Arrays & Array Methods
+- [JavaScript Fundamentals – Arrays and Array Methods](#javascript-fundamentals--arrays-and-array-methods)
+- [`push()` – Adding Items to an Array](#5-push--adding-items-to-an-array)
+- [`findIndex()` – Finding the Position of an Item](#6-findindex--finding-the-position-of-an-item)
+- [`map()` – Transforming Arrays](#8-map--transforming-arrays-very-important)
+
+## Destructuring
+- [JavaScript Fundamentals – Destructuring Arrays and Objects](#javascript-fundamentals--destructuring-arrays-and-objects)
+- [Array Destructuring](#1-array-destructuring)
+- [Object Destructuring](#2-object-destructuring)
+- [Destructuring in Function Parameters](#javascript-fundamentals--destructuring-in-function-parameters)
+
+## Spread Operator
+- [JavaScript Fundamentals – The Spread Operator (`...`)](#javascript-fundamentals--the-spread-operator-)
+- [Spread Operator with Arrays](#2-spread-operator-with-arrays)
+- [Spread Operator with Objects](#6-spread-operator-with-objects)
+
+## Control Structures
+- [JavaScript Fundamentals – Control Structures (`if`, `else`, `for`)](#javascript-fundamentals--control-structures-if-else-for)
+- [`for...of` Loop](#6-forof-loop--iterating-over-array-values-preferred)
+- [`for...in` Loop](#7-forin-loop--iterating-over-keys--indexes)
+
+## Functions as Values
+- [JavaScript Fundamentals – Functions as Values (Callbacks)](#javascript-fundamentals--functions-as-values-callbacks)
+- [Functions Inside Functions (Nested Functions)](#javascript-fundamentals--functions-inside-functions-nested-functions)
+
+## Primitive vs Reference Types
+- [JavaScript Values: Primitive vs Reference Types](#javascript-values-primitive-vs-reference-types)
+
+## Summary & Array Functions
+- [Next-Generation JavaScript – Core Feature Summary](#next-generation-javascript--core-feature-summary)
+- [JavaScript Array Functions (Essential for React)](#javascript-array-functions-essential-for-react)
+
+---
+
 # JavaScript Core Concepts – Browser Basics for React Developers
 
 ## JavaScript Execution Environments

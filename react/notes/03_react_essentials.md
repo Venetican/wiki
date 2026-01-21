@@ -1,3 +1,66 @@
+# 📚 Table of Contents
+
+## Introduction & Fundamentals
+- [React Essentials – What This Section Is About](#react-essentials--what-this-section-is-about)
+- [React Core Concept: Components](#react-core-concept-components)
+
+## Project Setup
+- [Getting Started with the React Project](#getting-started-with-the-react-project)
+- [Understanding the Starting React Project Structure](#understanding-the-starting-react-project-structure)
+- [index.html – Why It Looks Almost Empty](#indexhtml--why-it-looks-almost-empty)
+- [index.jsx – The Entry Point](#indexjsx--the-entry-point)
+- [App.jsx – Where the UI Comes From](#appjsx--where-the-ui-comes-from)
+
+## JSX & Components
+- [JSX – JavaScript Syntax Extension](#jsx--javascript-syntax-extension)
+- [React Components – The Core Concept](#react-components--the-core-concept)
+- [Creating and Using Your First Custom React Component](#creating-and-using-your-first-custom-react-component)
+- [How React Components End Up on the Screen](#how-react-components-end-up-on-the-screen)
+
+## Dynamic Content
+- [Outputting Dynamic Content in React Components](#outputting-dynamic-content-in-react-components)
+- [Loading Images Correctly in React with Dynamic Values](#loading-images-correctly-in-react-with-dynamic-values)
+
+## Props (Component Properties)
+- [Reusable Components & Props in React](#reusable-components--props-in-react)
+- [Finishing Reusable Components with External Data](#finishing-reusable-components-with-external-data)
+- [Advanced Props Patterns in React](#advanced-props-patterns-in-react)
+- [React Props – Practical Example Explained](#react-props--practical-example-explained)
+
+## Project Structure
+- [Restructuring React Components into Separate Files](#restructuring-react-components-into-separate-files)
+- [Splitting Styles into Component-Specific CSS Files in React](#splitting-styles-into-component-specific-css-files-in-react)
+
+## Children Prop & Composition
+- [Tab Buttons, `children` Prop, and Component Composition in React](#tab-buttons-children-prop-and-component-composition-in-react)
+- [Card Component – Structured Notes (Props & Children)](#card-component--structured-notes-props--children)
+
+## Event Handling
+- [Handling Click Events in React (TabButton Example)](#handling-click-events-in-react-tabbutton-example)
+- [Passing Event Handlers from Parent to Child (TabButton → App)](#passing-event-handlers-from-parent-to-child-tabbutton--app)
+- [Passing Arguments to Event Handlers in React (Tabs Example)](#passing-arguments-to-event-handlers-in-react-tabs-example)
+
+## State Management
+- [Why a Normal Variable Does NOT Update the UI in React](#why-a-normal-variable-does-not-update-the-ui-in-react)
+- [React State with useState – Making the UI Truly Dynamic](#react-state-with-usestate--making-the-ui-truly-dynamic)
+- [Using State to Render Dynamic Tab Content](#using-state-to-render-dynamic-tab-content)
+
+## Conditional Rendering
+- [Conditional Rendering in React](#conditional-rendering-in-react)
+- [Logical NOT (`!`) in JavaScript — Clear and Practical Explanation](#logical-not--in-javascript--clear-and-practical-explanation)
+- [Example: Conditional Rendering with `useState` (Delete / Proceed Flow)](#example-conditional-rendering-with-usestate-delete--proceed-flow)
+
+## Dynamic Styling
+- [Dynamic Styling in React: Highlighting the Selected Tab](#dynamic-styling-in-react-highlighting-the-selected-tab)
+
+## Dynamic Lists
+- [Rendering Lists Dynamically in React (Using `map()`)](#rendering-lists-dynamically-in-react-using-map)
+
+## Summary
+- [React Essentials — Section Summary](#react-essentials--section-summary)
+
+---
+
 ## React Essentials – What This Section Is About
 
 In this **React Essentials** section, we will build a **complete demo web application from scratch** using React.
