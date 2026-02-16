@@ -4233,11 +4233,11 @@ This rule is called **lifting state up**.
 
 Imagine this component tree:
 
-^^^
+```
 App
  ├─ TemperatureInputCelsius
  └─ TemperatureInputFahrenheit
-^^^
+```
 
 You want:
 - typing in Celsius updates Fahrenheit
@@ -4247,7 +4247,7 @@ You want:
 
 If each input manages its own state:
 
-^^^jsx
+```jsx
 function TemperatureInputCelsius() {
   const [value, setValue] = useState('');
 }
@@ -4255,7 +4255,7 @@ function TemperatureInputCelsius() {
 function TemperatureInputFahrenheit() {
   const [value, setValue] = useState('');
 }
-^^^
+```
 
 They cannot synchronize.
 They are siblings.
@@ -4267,7 +4267,7 @@ They cannot see each other’s state.
 
 You move the shared state to the parent:
 
-^^^jsx
+```jsx
 function App() {
   const [temperature, setTemperature] = useState(0);
 
@@ -4284,7 +4284,7 @@ function App() {
     </>
   );
 }
-^^^
+```
 
 Now:
 - App owns the state
@@ -4314,11 +4314,11 @@ They share **props**.
 
 You have two independent components:
 
-^^^
+```
 App
  ├─ Player
  └─ GameBoard
-^^^
+```
 
 Both need to know:
 - which player is currently active
@@ -4350,7 +4350,7 @@ The **closest common ancestor** of both components is `App`.
 
 So the state must live there.
 
-^^^jsx
+```jsx
 function App() {
   const [activePlayer, setActivePlayer] = useState('X');
 
@@ -4370,7 +4370,7 @@ function App() {
     </>
   );
 }
-^^^
+```
 
 ---
 
@@ -4385,11 +4385,11 @@ React state updates are:
 
 Therefore, this is the correct pattern:
 
-^^^jsx
+```jsx
 setActivePlayer(prevPlayer =>
   prevPlayer === 'X' ? 'O' : 'X'
 );
-^^^
+```
 
 This guarantees correctness even if updates are queued.
 
@@ -4416,7 +4416,7 @@ This is **unidirectional data flow**, which is a core React principle.
 
 ## Player Component: Consuming Lifted State
 
-^^^jsx
+```jsx
 function Player({ name, symbol, isActive }) {
   return (
     <li className={isActive ? 'active' : undefined}>
@@ -4425,7 +4425,7 @@ function Player({ name, symbol, isActive }) {
     </li>
   );
 }
-^^^
+```
 
 The Player component:
 - does not know how state changes
@@ -4438,7 +4438,7 @@ This is ideal component design.
 
 ## GameBoard Component: Using Lifted State
 
-^^^jsx
+```jsx
 function GameBoard({ activePlayerSymbol, onSelectSquare }) {
   function handleClick(row, col) {
     onSelectSquare();
@@ -4451,7 +4451,7 @@ function GameBoard({ activePlayerSymbol, onSelectSquare }) {
     </button>
   );
 }
-^^^
+```
 
 GameBoard:
 - does not decide whose turn it is
@@ -4614,13 +4614,13 @@ This is lifting state up **and redesigning it**, not just moving it.
 
 Conceptually, the state becomes:
 
-^^^js
+```js
 [
   { player: 'X', row: 0, col: 1 },
   { player: 'O', row: 2, col: 0 },
   { player: 'X', row: 1, col: 1 }
 ]
-^^^
+```
 
 This array:
 - grows with every valid click
@@ -4775,11 +4775,11 @@ Instead:
 
 Conceptually:
 
-^^^js
+```js
 <button onClick={() => onSelectSquare(rowIndex, colIndex)}>
   {playerSymbol}
 </button>
-^^^
+```
 
 GameBoard becomes a **pure UI component**.
 
@@ -4789,9 +4789,9 @@ GameBoard becomes a **pure UI component**.
 
 All game progress is now represented by **one state** in `App`:
 
-^^^js
+```js
 const [gameTurns, setGameTurns] = useState([]);
-^^^
+```
 
 This array stores *what happened*, not *what the board looks like*.
 
@@ -4803,12 +4803,12 @@ Each entry describes one turn.
 
 A turn is best represented as an object:
 
-^^^js
+```js
 {
   player: 'X',
   square: { row: 0, col: 2 }
 }
-^^^
+```
 
 Why this structure works well:
 
@@ -4834,12 +4834,12 @@ Key rules applied here:
 
 ### Functional State Update
 
-^^^js
+```js
 setGameTurns((prevTurns) => {
   ...
   return updatedTurns;
 });
-^^^
+```
 
 React guarantees that `prevTurns` is always the latest version.
 
@@ -4869,13 +4869,13 @@ Instead, the current player is **derived from `prevTurns`**.
 
 Conceptually:
 
-^^^js
+```js
 let currentPlayer = 'X';
 
 if (prevTurns.length > 0 && prevTurns[0].player === 'X') {
   currentPlayer = 'O';
 }
-^^^
+```
 
 This guarantees correctness because:
 - it relies only on `prevTurns`
@@ -4892,7 +4892,7 @@ State is updated immutably:
 - prepend the new turn
 - keep old turns untouched
 
-^^^js
+```js
 const updatedTurns = [
   {
     player: currentPlayer,
@@ -4900,7 +4900,7 @@ const updatedTurns = [
   },
   ...prevTurns
 ];
-^^^
+```
 
 Why prepend instead of append?
 
@@ -4914,9 +4914,9 @@ Why prepend instead of append?
 
 Finally:
 
-^^^js
+```js
 return updatedTurns;
-^^^
+```
 
 React will:
 - store this new array
@@ -4970,9 +4970,9 @@ This is one of the most important React patterns to understand well.
 
 We already store *everything that happened* in the game inside this state:
 
-^^^js
+```js
 const [gameTurns, setGameTurns] = useState([]);
-^^^
+```
 
 Each turn describes:
 - which player acted
@@ -4992,9 +4992,9 @@ That means we **do not need a separate board state**.
 
 The App component passes the turns down:
 
-^^^jsx
+```jsx
 <GameBoard turns={gameTurns} onSelectSquare={handleSelectSquare} />
-^^^
+```
 
 This establishes a clear contract:
 
@@ -5008,11 +5008,11 @@ This establishes a clear contract:
 
 Inside `GameBoard`, we now expect a `turns` prop:
 
-^^^js
+```js
 export default function GameBoard({ turns, onSelectSquare }) {
   ...
 }
-^^^
+```
 
 GameBoard itself has **no state** anymore.  
 It only computes values from props.
@@ -5023,19 +5023,19 @@ It only computes values from props.
 
 We still need the same 3×3 structure every time:
 
-^^^js
+```js
 const initialGameBoard = [
   [null, null, null],
   [null, null, null],
   [null, null, null],
 ];
-^^^
+```
 
 Inside the component, we create a working copy:
 
-^^^js
+```js
 let gameBoard = initialGameBoard.map(row => [...row]);
-^^^
+```
 
 Why copy?
 
@@ -5051,14 +5051,14 @@ Now comes the key concept: **replay the game**.
 
 We loop over all turns and apply them one by one:
 
-^^^js
+```js
 for (const turn of turns) {
   const { square, player } = turn;
   const { row, col } = square;
 
   gameBoard[row][col] = player;
 }
-^^^
+```
 
 What happens here conceptually:
 
@@ -5116,9 +5116,9 @@ The reason was subtle but important.
 
 This code was incorrect:
 
-^^^jsx
+```jsx
 <button onClick={onSelectSquare}>
-^^^
+```
 
 Because:
 - `onClick` does not pass row/column
@@ -5129,9 +5129,9 @@ Because:
 
 We wrap the call in an anonymous function:
 
-^^^jsx
+```jsx
 <button onClick={() => onSelectSquare(rowIndex, colIndex)}>
-^^^
+```
 
 This ensures:
 - we control arguments explicitly
@@ -5217,7 +5217,7 @@ This makes it a perfect example of *derived UI*.
 
 Each turn in `gameTurns` looks like this:
 
-^^^js
+```js
 {
   player: 'X' | 'O',
   square: {
@@ -5225,7 +5225,7 @@ Each turn in `gameTurns` looks like this:
     col: number
   }
 }
-^^^
+```
 
 This structure already contains **all information the log needs**.
 
@@ -5237,7 +5237,7 @@ This structure already contains **all information the log needs**.
 
 The Log component expects a `turns` prop:
 
-^^^js
+```js
 export default function Log({ turns }) {
   return (
     <ol id="log">
@@ -5245,7 +5245,7 @@ export default function Log({ turns }) {
     </ol>
   );
 }
-^^^
+```
 
 This clearly communicates:
 - Log does not own the data
@@ -5257,14 +5257,14 @@ This clearly communicates:
 
 We now transform `turns` into `<li>` elements:
 
-^^^jsx
+```jsx
 {turns.map(turn => (
   <li key={`${turn.square.row}-${turn.square.col}`}>
     Player {turn.player} selected
     ({turn.square.row}, {turn.square.col})
   </li>
 ))}
-^^^
+```
 
 Let’s break this down carefully.
 
@@ -5296,9 +5296,9 @@ This data was already stored earlier — no recomputation needed.
 
 ### The key Prop
 
-^^^js
+```js
 key={`${turn.square.row}-${turn.square.col}`}
-^^^
+```
 
 Why this works well here:
 
@@ -5316,9 +5316,9 @@ It is used internally by React’s reconciliation algorithm.
 
 This uses JavaScript template literals:
 
-^^^js
+```js
 `${value1}-${value2}`
-^^^
+```
 
 - backticks allow embedding values into strings
 - `${...}` injects expressions
@@ -5330,9 +5330,9 @@ This uses JavaScript template literals:
 
 The final step is passing the data down from App:
 
-^^^jsx
+```jsx
 <Log turns={gameTurns} />
-^^^
+```
 
 This completes the data flow:
 
